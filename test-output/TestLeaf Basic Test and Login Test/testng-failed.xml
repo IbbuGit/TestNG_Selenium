@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [TestLeaf Basic Test and Login Test]">
+  <test thread-count="5" name="Login test(failed)">
+    <parameter name="URL" value="http://leaftaps.com/opentaps"/>
+    <classes>
+      <class name="testClasses.LoginTest">
+        <methods>
+          <include name="EndApp"/>
+          <include name="startApp"/>
+          <include name="test_VerifyAppDownErrorMessage"/>
+        </methods>
+      </class> <!-- testClasses.LoginTest -->
+    </classes>
+  </test> <!-- Login test(failed) -->
+  <test thread-count="5" name="Alert test(failed)">
+    <parameter name="URL" value="https://www.rediffmail.com"/>
+    <classes>
+      <class name="testClasses.LoginTest">
+        <methods>
+          <include name="EndApp"/>
+          <include name="startApp"/>
+          <include name="test_VerifyAppDownErrorMessage"/>
+          <include name="test_loginPositiveData"/>
+        </methods>
+      </class> <!-- testClasses.LoginTest -->
+    </classes>
+  </test> <!-- Alert test(failed) -->
+</suite> <!-- Failed suite [TestLeaf Basic Test and Login Test] -->

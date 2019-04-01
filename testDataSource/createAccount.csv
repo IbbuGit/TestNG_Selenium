@@ -1,0 +1,6 @@
+testname,username,password,accountName,localName,annualRevenue,industry,areaCode,eMail,phoneNum,webUrl,address,city,postalCode,Country,state,accountID
+test_CreateAccount,DemoSalesManager,crmsfa,nilofur,sakee,100000,Media,603103,sakee22naz@gmail.com,13456789,www.poiurs.com,padur,kanchipuram,603110,AUS,AU-VIC,11591
+test_ParentAccountLinkage,DemoSalesManager,crmsfa,,,,,,,,,,,,,,accountlimit100
+"",,,,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,,,
+"",,,,,,,,,,,,,,,,

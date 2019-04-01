@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestLeaf Basic Test and Login Test">
+	<test name="Basic test">
+		<parameter name="URL" value="http://leaftaps.com/opentaps"></parameter>
+		<classes>
+			<class name="testClasses.basicTests"></class>
+		</classes>
+	</test>
+	<test name="Login test">
+		<parameter name="URL" value="http://leaftaps.com/opentaps"></parameter>
+		<classes>
+			
+			<class name="testClasses.LoginTest"></class>
+		</classes>
+	</test>
+	<test name="Alert test">
+		<parameter name="URL" value="https://www.rediffmail.com"></parameter>
+		<classes>
+			<class name="testClasses.AlertTests"></class>
+		</classes>
+	</test>
+</suite>

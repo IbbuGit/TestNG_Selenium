@@ -1,0 +1,7 @@
+testName,username,password,loginbutton_text,loginPage_ErrorMessage
+test_loginPositiveData,DemoSalesManager,crmsfa,,
+test_verifyloginbuttontest,,,Login,
+test_VerifyLoginErrorMessages,,crmsfa,,"The Following Errors Occurred:,username was empty reenter"
+test_VerifyLoginErrorMessages,DemoSalesManager,,,"The Following Errors Occurred:,password was empty reenter"
+test_VerifyLoginErrorMessages,,,,"The Following Errors Occurred:,username was empty reenter,password was empty reenter"
+test_VerifyLoginErrorMessages,hadi,zoya,,"The Following Errors Occurred:,following error occurred during login: User not found."

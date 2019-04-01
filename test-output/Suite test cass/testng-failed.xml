@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite test cass]">
+  <test thread-count="5" name="All tests(failed)">
+    <parameter name="password" value="crmsfa"/>
+    <parameter name="URL" value="http://leaftaps.com/opentaps"/>
+    <parameter name="username" value="DemoSalesManager"/>
+    <groups>
+      <run>
+        <include name="Important1"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testClasses.LoginTest">
+        <methods>
+          <include name="EndApp"/>
+          <include name="startApp"/>
+          <include name="test_loginPositiveData"/>
+        </methods>
+      </class> <!-- testClasses.LoginTest -->
+    </classes>
+  </test> <!-- All tests(failed) -->
+</suite> <!-- Failed suite [Suite test cass] -->
