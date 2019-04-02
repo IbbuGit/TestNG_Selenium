@@ -9,9 +9,11 @@
     <classes>
       <class name="testClasses.CreateAccountTest">
         <methods>
-          <include name="test_ParentAccountLinkage" invocation-numbers="0"/>
+          <include name="beforeSuite"/>
           <include name="EndApp"/>
           <include name="startApp"/>
+          <include name="afterSuite"/>
+          <include name="test_CreateAccount"/>
         </methods>
       </class> <!-- testClasses.CreateAccountTest -->
     </classes>

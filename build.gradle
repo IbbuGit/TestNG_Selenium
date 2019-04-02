@@ -17,15 +17,21 @@ repositories {
 }
 
 dependencies {
-   // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
-compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '2.41.0'
-   
-   // https://mvnrepository.com/artifact/org.testng/testng
-testCompile group: 'org.testng', name: 'testng', version: '6.14.3'
-   
- // https://mvnrepository.com/artifact/com.opencsv/opencsv
-compile group: 'com.opencsv', name: 'opencsv', version: '4.1'
 
+	// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+	compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+	   
+	   // https://mvnrepository.com/artifact/org.testng/testng
+	testCompile group: 'org.testng', name: 'testng', version: '6.14.3'
+	   
+	 // https://mvnrepository.com/artifact/com.opencsv/opencsv
+	compile group: 'com.opencsv', name: 'opencsv', version: '4.1'
+	
+	// https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
+	compile group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '3.4.0'
+	
+	// https://mvnrepository.com/artifact/com.relevantcodes/extentreports
+	compile group: 'com.relevantcodes', name: 'extentreports', version: '2.41.2'
    
-   }
+}
 

@@ -8,7 +8,7 @@
 
 		<classes>			
 			<class name="testClasses.CreateAccountTest">
-			<methods><include name="test_ParentAccountLinkage"></include></methods>
+			<methods><include name="test_CreateAccount"></include></methods>
 			</class>			
 		</classes>
 
