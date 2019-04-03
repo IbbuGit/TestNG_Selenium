@@ -11,10 +11,22 @@ import com.relevantcodes.extentreports.LogStatus;
 
 public class EventHandler implements WebDriverEventListener{
 	ExtentTest Report = null;
-	String webElementMethodName=null;
 	
 	EventHandler(ExtentTest testReport) {
 		this.Report=testReport;
+	}
+	
+	String getWebElementMethod() {
+		String name=null;
+		StackTraceElement[] stack=Thread.currentThread().getStackTrace();
+		
+		for(int i=8;i<=stack.length;i++) {
+			if(stack[i].getClassName().toUpperCase().contains("PAGECLASSES.")){
+				name=stack[i].getMethodName();
+				break;
+			}
+		}
+		return name;
 	}
 
 	@Override
@@ -96,7 +108,7 @@ public class EventHandler implements WebDriverEventListener{
 
 	@Override
 	public void afterFindBy(By by, WebElement element, WebDriver driver) {
-		webElementMethodName = Thread.currentThread().getStackTrace()[15].getMethodName();
+		
 	}
 
 	@Override
@@ -107,7 +119,16 @@ public class EventHandler implements WebDriverEventListener{
 
 	@Override
 	public void afterClickOn(WebElement element, WebDriver driver) {
-		Report.log(LogStatus.INFO, "Clicked " + webElementMethodName.replace("click", ""));
+		
+		String webElementMethodName=getWebElementMethod();
+		
+		if(webElementMethodName.toUpperCase().contains("CLICK")) {
+			Report.log(LogStatus.INFO, "Clicked " + webElementMethodName.replace("click", ""));
+		}else if(webElementMethodName.toUpperCase().contains("SELECT")) {
+			Report.log(LogStatus.INFO, "Value[  ] selected from" + "[" + webElementMethodName.replace("select", "") + "]");
+		}	
+		
+		Report.log(LogStatus.INFO, "Clicked " + getWebElementMethod().replace("click", ""));
 	}
 
 	@Override
@@ -117,14 +138,9 @@ public class EventHandler implements WebDriverEventListener{
 	}
 
 	@Override
-	public void afterChangeValueOf(WebElement element, WebDriver driver, CharSequence[] keysToSend) {
-		// TODO Auto-generated method stub
+	public void afterChangeValueOf(WebElement element, WebDriver driver, CharSequence[] keysToSend) {		
 		
-		if(webElementMethodName.toUpperCase().contains("ENTER")) {
-			Report.log(LogStatus.INFO, "Value[" + keysToSend + "] set in" + "[" + webElementMethodName.replace("enter", "") + "]");
-		}else if(webElementMethodName.toUpperCase().contains("SELECT")) {
-			Report.log(LogStatus.INFO, "Value[" + keysToSend + "] selected from" + "[" + webElementMethodName.replace("select", "") + "]");
-		}		
+		Report.log(LogStatus.INFO, "Value[" + keysToSend[0] + "] set in" + "[" + getWebElementMethod().replace("enter", "") + "]");
 		
 	}
 
@@ -177,7 +193,7 @@ public class EventHandler implements WebDriverEventListener{
 
 	@Override
 	public void afterGetText(WebElement element, WebDriver driver, String text) {
-		Report.log(LogStatus.INFO, "Got text[" + text + "] from [" + webElementMethodName.replace("getext", "") + "]");
+		Report.log(LogStatus.INFO, "Got text[" + text + "] from [" + getWebElementMethod().replace("getext", "") + "]");
 		
 	}
 

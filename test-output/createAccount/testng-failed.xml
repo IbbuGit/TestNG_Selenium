@@ -13,7 +13,7 @@
           <include name="EndApp"/>
           <include name="startApp"/>
           <include name="afterSuite"/>
-          <include name="test_CreateAccount"/>
+          <include name="test_CreateAccount" invocation-numbers="0"/>
         </methods>
       </class> <!-- testClasses.CreateAccountTest -->
     </classes>

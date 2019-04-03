@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="createAccount" duration-ms="38903" started-at="2019-04-02T19:19:02Z" finished-at="2019-04-02T19:19:41Z">
+  <suite name="createAccount" duration-ms="206615" started-at="2019-04-03T16:24:09Z" finished-at="2019-04-03T16:27:35Z">
     <groups>
     </groups>
-    <test name="All tests" duration-ms="38903" started-at="2019-04-02T19:19:02Z" finished-at="2019-04-02T19:19:41Z">
+    <test name="All tests" duration-ms="206615" started-at="2019-04-03T16:24:09Z" finished-at="2019-04-03T16:27:35Z">
       <class name="testClasses.CreateAccountTest">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testClasses.CreateAccountTest@7193666c]" name="beforeSuite" is-config="true" duration-ms="263" started-at="2019-04-02T19:19:02Z" finished-at="2019-04-02T19:19:02Z">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testClasses.CreateAccountTest@7193666c]" name="beforeSuite" is-config="true" duration-ms="452" started-at="2019-04-03T16:24:08Z" finished-at="2019-04-03T16:24:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="startApp(java.lang.String, java.lang.String, java.lang.reflect.Method)[pri:0, instance:testClasses.CreateAccountTest@7193666c]" name="startApp" is-config="true" duration-ms="12929" started-at="2019-04-02T19:19:02Z" finished-at="2019-04-02T19:19:15Z">
+        <test-method status="PASS" signature="startApp(java.lang.String, java.lang.String, java.lang.reflect.Method)[pri:0, instance:testClasses.CreateAccountTest@7193666c]" name="startApp" is-config="true" duration-ms="9023" started-at="2019-04-03T16:24:09Z" finished-at="2019-04-03T16:24:18Z">
           <params>
             <param index="0">
               <value>
@@ -32,7 +32,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startApp -->
-        <test-method status="PASS" signature="test_CreateAccount(java.util.LinkedHashMap)[pri:0, instance:testClasses.CreateAccountTest@7193666c]" name="test_CreateAccount" duration-ms="22220" started-at="2019-04-02T19:19:15Z" data-provider="ReadCSV_getRowDataForRowName" finished-at="2019-04-02T19:19:37Z">
+        <test-method status="PASS" signature="test_CreateAccount(java.util.LinkedHashMap)[pri:0, instance:testClasses.CreateAccountTest@7193666c]" name="test_CreateAccount" duration-ms="17252" started-at="2019-04-03T16:24:18Z" data-provider="ReadCSV_getRowDataForRowName" finished-at="2019-04-03T16:24:35Z">
           <params>
             <param index="0">
               <value>
@@ -43,11 +43,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_CreateAccount -->
-        <test-method status="PASS" signature="EndApp()[pri:0, instance:testClasses.CreateAccountTest@7193666c]" name="EndApp" is-config="true" duration-ms="3714" started-at="2019-04-02T19:19:37Z" finished-at="2019-04-02T19:19:41Z">
+        <test-method status="PASS" signature="EndApp()[pri:0, instance:testClasses.CreateAccountTest@7193666c]" name="EndApp" is-config="true" duration-ms="180281" started-at="2019-04-03T16:24:35Z" finished-at="2019-04-03T16:27:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EndApp -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:testClasses.CreateAccountTest@7193666c]" name="afterSuite" is-config="true" duration-ms="36" started-at="2019-04-02T19:19:41Z" finished-at="2019-04-02T19:19:41Z">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:testClasses.CreateAccountTest@7193666c]" name="afterSuite" is-config="true" duration-ms="5" started-at="2019-04-03T16:27:35Z" finished-at="2019-04-03T16:27:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->

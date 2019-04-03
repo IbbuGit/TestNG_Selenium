@@ -72,7 +72,7 @@ public class base {
 		Report.setEndedTime(new Date());
 		extent.endTest(Report);		
 		try {
-			FileUtils.copyFile(new File(reportFolder+"\\report.html"), new File("Report\\report.html"), true);
+			FileUtils.copyFile(new File(reportFolder+"\\report.html"), new File("Reports\\report.html"), true);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -119,8 +119,6 @@ public class base {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
-		
-		Report.log(LogStatus.INFO, "<----Test Case " + testName + " Start---->");
 	}
 
 	@AfterMethod(alwaysRun=true)
