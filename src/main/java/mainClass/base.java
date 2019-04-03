@@ -31,13 +31,13 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.ITestContext;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
-
 import com.opencsv.CSVReader;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -122,9 +122,17 @@ public class base {
 	}
 
 	@AfterMethod(alwaysRun=true)
-	public void EndApp()
+	public void EndApp(ITestResult result)
 	{
-		Report.addScreenCapture(getscreenshot(driver,reportFolder));
+		if(result.getStatus() == ITestResult.SUCCESS) {
+			Report.log(LogStatus.PASS, Report.addScreenCapture(getscreenshot(driver,reportFolder)));	
+		}else if(result.getStatus() == ITestResult.FAILURE) {
+			Report.log(LogStatus.FAIL, Report.addScreenCapture(getscreenshot(driver,reportFolder)));
+		}else if(result.getStatus() == ITestResult.SKIP) {
+			Report.log(LogStatus.SKIP, Report.addScreenCapture(getscreenshot(driver,reportFolder)));
+		}
+		
+		
 		Report.log(LogStatus.INFO, "<----Test Case " + testName + " End---->");
 		extent.endTest(Report);
 		extent.flush();

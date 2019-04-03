@@ -125,7 +125,7 @@ public class EventHandler implements WebDriverEventListener{
 		if(webElementMethodName.toUpperCase().contains("CLICK")) {
 			Report.log(LogStatus.INFO, "Clicked " + webElementMethodName.replace("click", ""));
 		}else if(webElementMethodName.toUpperCase().contains("SELECT")) {
-			Report.log(LogStatus.INFO, "Value[  ] selected from" + "[" + webElementMethodName.replace("select", "") + "]");
+			Report.log(LogStatus.INFO, "Value selected from" + "[" + webElementMethodName.replace("select", "") + "]");
 		}	
 		
 		Report.log(LogStatus.INFO, "Clicked " + getWebElementMethod().replace("click", ""));
@@ -140,7 +140,7 @@ public class EventHandler implements WebDriverEventListener{
 	@Override
 	public void afterChangeValueOf(WebElement element, WebDriver driver, CharSequence[] keysToSend) {		
 		
-		Report.log(LogStatus.INFO, "Value[" + keysToSend[0] + "] set in" + "[" + getWebElementMethod().replace("enter", "") + "]");
+		Report.log(LogStatus.INFO, "Value[" + keysToSend[0] + "] entered in" + "[" + getWebElementMethod().replace("enter", "") + "]");
 		
 	}
 
