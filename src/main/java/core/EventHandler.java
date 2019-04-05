@@ -61,7 +61,8 @@ public class EventHandler implements WebDriverEventListener{
 
 	@Override
 	public void afterNavigateTo(String url, WebDriver driver) {
-		Report.log(LogStatus.INFO, "Application URL loaded "+url+" Succesfully");		
+		Report.log(LogStatus.INFO, "Application URL loaded "+url+" Succesfully");	
+		System.out.println(LogStatus.INFO+" :Application URL loaded "+url+" Succesfully");
 	}
 
 	@Override
@@ -126,9 +127,9 @@ public class EventHandler implements WebDriverEventListener{
 			Report.log(LogStatus.INFO, "Clicked " + webElementMethodName.replace("click", ""));
 		}else if(webElementMethodName.toUpperCase().contains("SELECT")) {
 			Report.log(LogStatus.INFO, "Value selected from" + "[" + webElementMethodName.replace("select", "") + "]");
-		}	
-		
-		Report.log(LogStatus.INFO, "Clicked " + getWebElementMethod().replace("click", ""));
+			System.out.println(LogStatus.INFO + ": Value selected from the menu" + "["
+					+ webElementMethodName.replace("select", "") + "]");
+		}			
 	}
 
 	@Override
@@ -139,8 +140,10 @@ public class EventHandler implements WebDriverEventListener{
 
 	@Override
 	public void afterChangeValueOf(WebElement element, WebDriver driver, CharSequence[] keysToSend) {		
+		String webElementMethodName=getWebElementMethod().replace("enter", "");
 		
-		Report.log(LogStatus.INFO, "Value[" + keysToSend[0] + "] entered in" + "[" + getWebElementMethod().replace("enter", "") + "]");
+		Report.log(LogStatus.INFO, "Value[" + keysToSend[0] + "] entered in" + "[" + webElementMethodName + "]");		
+		System.out.println(LogStatus.INFO + ": Value[" + keysToSend[0] + "] set in" + "[" + webElementMethodName + "]");
 		
 	}
 
@@ -193,7 +196,9 @@ public class EventHandler implements WebDriverEventListener{
 
 	@Override
 	public void afterGetText(WebElement element, WebDriver driver, String text) {
-		Report.log(LogStatus.INFO, "Got text[" + text + "] from [" + getWebElementMethod().replace("getext", "") + "]");
+		String webElementMethodName=getWebElementMethod().replace("get", "");
+		Report.log(LogStatus.INFO, "Got text[" + text + "] from [" + webElementMethodName + "]");
+		System.out.println(LogStatus.INFO + ": Got text[" + text + "] from [" + webElementMethodName + "]");
 		
 	}
 
