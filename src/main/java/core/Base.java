@@ -37,7 +37,8 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
+import org.testng.asserts.SoftAssert;
+
 import com.opencsv.CSVReader;
 import com.opencsv.bean.CsvToBeanBuilder;
 import com.relevantcodes.extentreports.ExtentReports;
@@ -48,7 +49,7 @@ import enums.Alerts;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
-public class Base {
+public class Base extends SoftAssert {
 
 	protected EventFiringWebDriver driver;
 	protected ConfigData configData;
@@ -61,7 +62,7 @@ public class Base {
 	public void beforeSuite() throws IOException {
 		
 		reportFolder = Files.createTempDirectory(getDateAndTimeNow()).toAbsolutePath().toString();
-		extent = new ExtentReports(reportFolder+"\\report.html", true);
+		extent = new ExtentReports(reportFolder+"\\Report.html", true);
 		extent.addSystemInfo("Environment", "Test");
 		extent.loadConfig(new File(System.getProperty("user.dir") + "\\extent-config.xml"));
 		
@@ -73,7 +74,7 @@ public class Base {
 	public void afterSuite() throws IOException {
 		extent.flush();
 		extent.close();
-		FileUtils.copyFile(new File(reportFolder+"\\report.html"), new File("Reports\\report.html"), true);
+		FileUtils.copyFile(new File(reportFolder+"\\Report.html"), new File("Reports\\Report.html"), true);
 	}
 	
 
@@ -228,7 +229,46 @@ public class Base {
 		LocalDateTime now = LocalDateTime.now();
 		return dtf.format(now).replace("/", "_").replace(" ", "_").replace(":", "_");
 	}
+	
+	public void assertAreEqual(String msg,Object oActual, Object oExpected) throws Exception {
+		if (oExpected != null && oActual != null) {
+			if (!oExpected.toString().isEmpty() && !oActual.toString().isEmpty()) {
+				if (oExpected.equals(oActual)) {
+					Report.log(LogStatus.PASS, msg + ": " + "Expected[" + oExpected.toString() + "] " + "Actual["
+							+ oActual.toString() + "]");
+					System.out.println(LogStatus.PASS + ": " + msg + ": " + "Expected[" + oExpected.toString() + "] "
+							+ "Actual[" + oActual.toString() + "]");
+				} else {
+					Report.log(LogStatus.FAIL, msg + ": " + "Expected[" + oExpected.toString() + "] " + "Actual["
+							+ oActual.toString() + "]");
+					System.out.println(LogStatus.FAIL + ": " + msg + ": " + "Expected[" + oExpected.toString() + "] "
+							+ "Actual[" + oActual.toString() + "]");
+					throw new Exception(
+							msg + "Expected[" + oExpected.toString() + "] " + "Actual[" + oActual.toString() + "]");
+				}
+			}
+		}
+	}
 
+	public void verifyAreEqual(String msg, ExtentTest report, Object oActual, Object oExpected) throws Exception {
+		if (oExpected != null && oActual != null) {
+			if (!oExpected.toString().isEmpty() && !oActual.toString().isEmpty()) {
+				if (oExpected.equals(oActual)) {
+					Report.log(LogStatus.PASS, msg + ": " + "Expected[" + oExpected.toString() + "] " + "Actual["
+							+ oActual.toString() + "]");
+					Report.log(LogStatus.PASS, Report.addScreenCapture(getscreenshot(driver, reportFolder)));
+					System.out.println(LogStatus.PASS + ": " + msg + ": " + "Expected[" + oExpected.toString() + "] "
+							+ "Actual[" + oActual.toString() + "]");
+				} else {
+					Report.log(LogStatus.FAIL, msg + ": " + "Expected[" + oExpected.toString() + "] " + "Actual["
+							+ oActual.toString() + "]");
+					Report.log(LogStatus.FAIL, Report.addScreenCapture(getscreenshot(driver, reportFolder)));
+					System.out.println(LogStatus.FAIL + ": " + msg + ": " + "Expected[" + oExpected.toString() + "] "
+							+ "Actual[" + oActual.toString() + "]");
+				}
+			}
+		}
+	}
 }
 
 

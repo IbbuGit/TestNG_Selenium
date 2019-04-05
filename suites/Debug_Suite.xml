@@ -1,14 +1,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="createAccount">
+<suite name="Login">
 	<test name="All tests">
-		<parameter name="URL" value="http://leaftaps.com/opentaps"></parameter>
-		<parameter name="username" value="DemoSalesManager"></parameter>
-		<parameter name="password" value="crmsfa"></parameter>
-		<parameter name="Browser" value="chrome"></parameter>
 
 		<classes>			
-			<class name="testClasses.CreateAccountTest">
-			<methods><include name="test_CreateAccount"></include></methods>
+			<class name="testClasses.LoginTest">
+			<methods><include name="test_verifyloginbuttontest"></include></methods>
 			</class>			
 		</classes>
 
