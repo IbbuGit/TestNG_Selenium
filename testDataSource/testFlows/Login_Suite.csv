@@ -1,0 +1,5 @@
+TestCases,Page1,Data1,Page2,Data2,Page3,Data3,Page4,Data4,Page5,Data5,Page6,Data6,Page7,Data7,Page8,Data8,Page9,Data9,Page10,Data10,Page11,Data11,Page12,Data12,Page13,Data13,Page14,Data14,Page15,Data15,Page16,Data16,Page17,Data17,Page18,Data18,Page19,Data19,Page20
+test_VerifyLoginErrorMessages,LoginData,userNameEmptyErrorMessages
+test_VerifyLoginErrorMessages,LoginData,passwordEmptyErrorMessages
+test_loginPositiveData,LoginData,Positive,MyHomeData,tempTest
+test_verifyloginbuttontest,LoginData,LoginButtonText

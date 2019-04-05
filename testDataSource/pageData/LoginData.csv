@@ -1,0 +1,7 @@
+dataScenarios,username,password,loginButton_text,errMsg
+Positive,DemoSalesManager,crmsfa,,
+LoginButtonText,,,Login,
+userNameEmptyErrorMessages,,crmsfa,,"The Following Errors Occurred:,username was empty reenter"
+passwordEmptyErrorMessages,DemoSalesManager,,,"The Following Errors Occurred:,password was empty reenter"
+bothEmptyErrorMessages,,,,"The Following Errors Occurred:,username was empty reenter,password was empty reenter"
+useNotFoundErrorMessages,hadi,zoya,,"The Following Errors Occurred:,following error occurred during login: User not found."

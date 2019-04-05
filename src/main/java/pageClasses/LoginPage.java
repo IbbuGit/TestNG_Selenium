@@ -1,5 +1,6 @@
 package pageClasses;
 
+import java.io.FileReader;
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
@@ -7,10 +8,22 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+import com.opencsv.bean.CsvToBeanBuilder;
 
-	public LoginPage(WebDriver driver){
+import testDataTypes.LoginData;
+
+public class LoginPage {
+	
+	public LoginData data;
+
+	public LoginPage(WebDriver driver,String dataScenario){
 		PageFactory.initElements(driver, this);
+		
+		try {
+			data=new CsvToBeanBuilder<LoginData>(new FileReader("testDataSource\\pageData\\LoginData.csv")).withType(LoginData.class).build().parse()
+					.stream().filter(x -> x.dataScenarios.equalsIgnoreCase(dataScenario)).findAny().get();
+		}catch (Exception e) {e.printStackTrace();}
+
 
 	}
 
