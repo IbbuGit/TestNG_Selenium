@@ -76,7 +76,6 @@ public class Base extends SoftAssert {
 		extent.close();
 		FileUtils.copyFile(new File(reportFolder+"\\Report.html"), new File("Reports\\Report.html"), true);
 	}
-	
 
 	@BeforeMethod(alwaysRun=true)	
 	public void startApp(Method method)
