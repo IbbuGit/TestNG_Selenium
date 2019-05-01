@@ -1,0 +1,14 @@
+[
+	{
+		"dataScenarios": "PossitiveData",
+		"username": "tstCAPServDeskFT",
+		"password": "Mercury2017$"
+	},
+	
+	
+	{
+		"dataScenarios": "UserNameEmpty",
+		"username": "",
+		"password": "Mercury2017$"
+	}
+]

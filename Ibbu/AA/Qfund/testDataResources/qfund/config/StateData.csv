@@ -1,0 +1,5 @@
+DataName,PayDay_SSN,LOC_SSN,Title_SSN,Installmet_SSN,City,State,ZipCode,RoutingNo,CM_StoreTransfer,Online_Store,Online_PostalCode
+FL,725_Random,,,,Miami,Florida,33101,253272148,5489
+TN,111_Random,311_Random,211_Random,,Nashville,Tennessee,37901,111111118,2226
+CO,,,,411_Random,Colorado Springs,Colorado,80918,102000076,
+OH,,,,411_Random,Cleveland,Ohio,44101,z44000037,,6041,43916

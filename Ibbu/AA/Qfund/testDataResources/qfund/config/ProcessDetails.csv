@@ -1,0 +1,197 @@
+ProcessName,Description,AppType,Modules,Allocation,Status,Target Date
+Admin,,,,,,
+adminDrawerDessign,De Assign all Drawer by Admin from a Store,QFund,CashManagement_Drawer,Gowri,Complete,
+adminDrawerDessignProcess,De Assign Drawer from a Store,QFund,AdminTransaction_Drawer_Dessign_PR,Gowri,Complete,
+safeForceDessign,De Assign Safe by Admin from a Store,QFund,AdminTransaction_Drawer_Dessign_PR,Gowri,Complete,
+adminEODBatchProcess,EOD Batch by Admin,QFund,AdminTransaction_EODBatchProcess_PR,Srikanth,Complete,3-Aug-18
+adminProcessDateChange,ProcessDateChange by Admin,QFund,AdminTransaction_QAJobs_ProcessDateChange_PR,Srikanth,Complete,28-Jul-18
+adminACHreturn,Admin issue ACHReturn,QFund,PayDayLoan_PR,Gowri,Complete,
+admin_ACH_GreenBankNACHAfile,Admin issue GreenBank NACHAfile for a Store,QFund,AdminTransactions_ACH_GreenBank_PR,Srikanth,Complete,4-Oct-18
+adminACHLOCWriteOffLOC,Admin issue WriteOff an ACH LOC Statement for a Store,QFund,AdminTransaction_ACH_LOC_PR,Srikanth,Complete,4-Oct-18
+adminACHLOCDefaultLOC,Admin issue Default an ACH LOC Statement for a Store,QFund,AdminTransaction_ACH_LOC_PR,Srikanth,Complete,4-Oct-18
+adminACHUnsecuredStatement,Admin issue Unsecure an ACH LOC Statement for a Store,QFund,AdminTransaction_ACH_LOC_PR,Gowri,Complete,4-Oct-18
+Customer Management,,,,,,
+applicationSearchAndSelect,Application Search and Select that record,QFund,Borrower_Registration_PR,Vivek,Complete,
+searchbyApplicantDetails,Application Search and Select that record,QFund,AppalicationSearch_PR,Vivek,Complete,
+brwrRegisterCustomer,register customer with all details,QFund,BorrowerRegistration_PR,Ibbu,Complete,
+brwrRegBanking,Registration BankingTab,QFund,BorrowerRegistration_PR,Gowri,Complete,
+brwrRegIncome,Registration IncomeTab,QFund,BorrowerRegistration_PR,Manish,Complete,
+brwrRegOthers,Registration OthersTab,QFund,BorrowerRegistration_PR,Lee,Complete,
+brwrRegPersonalInfo,Registration PersonalTab,QFund,BorrowerRegistration_PR,Ibbu,Complete,
+brwRegisterCustomerUsingAPI,Register customer using API,QFund,BorrowerRegistration_RestAPI,Ibbu,Complete,
+customerDenial,Deny the Loan for the Customer,QFund,LoanDecisioning_PR,Vivek,Complete,4-Oct-18
+customerHistory,customerHistory - Loan process,QFund,CustomerHistory_PR,Manish,Delete,
+customerSummary,customerSummary,QFund,CustomerSummary_PR,Manish,Delete,29-Jun-18
+customerSummaryView,customer Summary View details,QFund,LoanTransactions_Transactions_CustomerSummaryView_PR,Manish,Complete,
+uploadCustomerDocs,Uploading the Customer Documents,QFund,Borrower_UploadCustomerDocuments_PR,Vivek,Complete,
+deceased_Void,Decease customer and void,QFund,AdminCustomerBankruptAndDeceased_PR,Gowri,Complete,
+bankruptcyAndDeceased,Decease customer and void,QFund,AdminCustomerBankruptAndDeceased_PR,Gowri,Complete,
+getLoanNbrByCustNbr,Fetch Loan Nb By CustNbr,QFund,LoanTransactions_Transactions_CustomerSummaryView_PR,Manish,Complete,
+Access Management,,,,,,
+changePIN,Change the Password,QFund,Functional_PR,Ibbu,Complete,
+clockIn,clockIn,QFund,Functional_PR,Srikanth,Complete,29-Jun-18
+clockOut,clockOut,QFund,LoginQfundX_PR,Srikanth,Complete,29-Jun-18
+homeScreen,homeScreen,QFund,LoginQfundX_PR,Srikanth,Complete,29-Jun-18
+onlineData,getOnlineData,QFund,LoginQfundX_PR,Ibbu,Complete,
+loginApplication,loginApplication,QFund,LoginQfundX_PR,Ibbu,Complete,
+loginGoogle,loginApplication,QFund,LoginQfundX_PR,Ibbu,Complete,
+LoginClockChecking,Clock And ClockOut,QFund,Functional_PR,Gowri,Complete,
+loginQFundxSFApplication,login Qfundx,QFund,LoginQfundX_PR,Ibbu,Delete,
+logoutApplication,logout Qfundx,QFund,LoginQfundX_PR,Gowri,Complete,3-Jul-18
+pinExpired,pin Expired,QFund,Functional_PR,Srikanth,Complete,
+Collections Management,,,,,,
+collectionsSearch,Collections Search,QFund,Borrower_Collections_PR,Vivek,Complete,20-Sep-18
+collectionsEffort,Collections Effort and History,QFund,Borrower_Collections_PR,Vivek,Complete,27-Sep-18
+collectionsMakepayment,Make Payment to the Loan through Collections,QFund,Borrower_Collections_PR,Vivek,Complete,3-Oct-18
+collectionsSearchByQueue,Searching the Customer by Queue,QFund,Borrower_Collections_PR,Vivek,Complete,
+collectionsCustomerRecord,Verifying the Cusomer Records,QFund,Borrower_Collections_PR,Vivek,Complete,12-Oct-18
+collectionsPTPHistory,Verifying the PTP History details,QFund,Borrower_Collections_PR,Vivek,Complete,12-Oct-18
+collectionsVehicleHistory,Verifying the Vehicle History,QFund,Borrower_Collections_PR,Vivek,Complete,15-Oct-18
+collectionsTranscationHistory,Verifying the Transaction History,QFund,Borrower_Collections_PR,Vivek,Complete,19-Oct-18
+collections_TransLoanHistory,Verifying the Transaction History,QFund,Borrower_Collections_PR,Vivek,Complete,19-Oct-18
+collectionsPaymentSchedule,Verifying the Payment Schedule,QFund,Borrower_Collections_PR,Vivek,Complete,19-Oct-18
+collectionsNotesHistory,Update and Verify the Notes,QFund,Borrower_Collections_PR,Vivek,Complete,22-Oct-18
+collectionsEmailHistory,Verify the Email History,QFund,Borrower_Collections_PR,Vivek,Complete,23-Oct-18
+collectionsSummaryView,Verify the Customer Laon details in the summaryView,QFund,Borrower_Collections_PR,Vivek,Complete,25-Oct-18
+collectionsSMSHistory,Verify the SMS History,QFund,Borrower_Collections_PR,Vivek,Complete,5-Nov-18
+collectionsLetterHistory,Verify the Letter History,QFund,Borrower_Collections_PR,Vivek,Complete,5-Nov-18
+Cash Management,,,,,,
+drawerAssign,Drawer Assign,QFund,CashManagement_Drawer,Lee,Complete,
+drawerBalance,Drawer Balance,QFund,CashManagement_Drawer,Lee,Complete,
+drawerCheck,Drawer Assign by troubleshoot,QFund,CashManagement_SafeDrawer_Check,Ibbu,Complete,
+drawerDeAssign,Drawer DeAssign,QFund,CashManagement_Drawer,Lee,Complete,
+safeAssign,Safe Assign,QFund,CashManagement_Safe,Gowri,Complete,
+safeBalance,Safe Balance,QFund,CashManagement_Safe,Lee,Complete,
+safeCashIn,Safe CashIn,QFund,CashManagement_Safe,Srikanth,Complete,
+safeCashInVoid,Safe CashInVoid,QFund,CashManagement_Safe,Srikanth,Complete,29-Jun-18
+safeCheck,Assign Safe by troubleshoot,QFund,CashManagement_SafeDrawer_Check,Ibbu,Complete,
+safeDeposit,Safe Deposit,QFund,CashManagement_Safe,Lee,Complete,
+safeDepositVoid,Safe DepositVoid,QFund,CashManagement_Safe,Lee,Complete,29-Jun-18
+manualDepositSlip,manualDepositSlip,QFund,CashManagement_Safe,Srikanth,Complete,20-Sep-18
+safeDessign,Safe Dessign,QFund,CashManagement_Safe,Gowri,Complete,
+safeInternalTrans,Internal Transfer,QFund,CashManagement_Safe,Lee,Complete,
+storeToStoreTransfer,storeToStoreTransfer,QFund,CashManagement_Safe,Srikanth,Complete,29-Jun-18
+storeToStoreTransferVoid,Store to Store Transfer Void,QFund,CashManagement_Safe,Lee,Complete,
+eodProcessing,EOD processing for Qfundx,QFund,DailyProcessing_EOD_PR,Srikanth,Complete,29-Jun-18
+EOD,Perform the End of Day,QFund,EOD_BOD,Ibbu,Complete,
+BOD,Perform the Beginining of Day,QFund,EOD_BOD,Ibbu,Complete,
+PreRequisite,PreRequisite,QFund,Login_DateChange_Safe_Drawer_Registration_LoanOrigination_PR,Srikanth,Complete,
+Loan Management,,,,,,
+installmentOverview,installmentOverview,QFund,,Gowri,Delete,
+loanDecisioningLOC,select the LOC Loan,QFund,LoanTransaction_NewLoan_LOC_PR,Manish,Complete,
+loanDisbursment,Loan Disbursment,QFund,LoanTransactions_TitleLoan_PR,Vivek,Delete,
+loanEligibility,Loan Eligibility,QFund,LoanTransactions_TitleLoan_PR,Vivek,Delete,
+loanPayment,TLP Loan Payment,QFund,LoanTransactions_Transactions_Title_PR,Vivek,Complete,
+locClosure,LOC Loan Closure,QFund,LoanTransaction_Closer_LOC_PR,Manish,Complete,
+locLoan,Originate LOC Loan,QFund,LoanTransaction_NewLoan_LOC_PR,Manish,Complete,
+locOverview,Handle LOC Overview,QFund,,Srikanth,Delete,
+locPayments,LOC Loan Payment,QFund,LoanTransaction_NewLoan_LOC_Payments_PR,Manish,Complete,
+locPayOff,LOC Loan PayOff,QFund,LoanTransaction_NewLoan_LOC_PayOff_PR,Srikanth,Complete,17-Sep-18
+locDrawExistingCust,loc Draw Existing Customer,QFund,LoanTransaction_NewLoan_LOC_PR,Manish,Complete,
+locVoidDraw,Void the LOC Loan Draw,QFund,LoanTransaction_NewLoan_LOC_VoidDraw_PR,Manish,Complete,
+locVoidPayments,Void the LOC Loan Payment,QFund,LoanTransaction_NewLoan_LOC_VoidPayments_PR,Vivek,Complete,18-Sep-18
+negotiateLoan,negotiate the Loan Amount for TLP,QFund,LoanTransactions_TitleLoan_PR,Vivek,Delete,
+pageNavigation,all the user page Navigation,QFund,Qfundx_SF_HomeScreen_PR,Srikanth,Delete,
+payDayLoan,PDL origination,QFund,PayDayLoan_PR,Gowri,Complete,
+payDayLoanPayment,PDL Loan Partial payment,QFund,PayDay_PartialPayment_PR,Gowri,Complete,
+paydayOverview,paydayOverview,QFund,,Vivek,Delete,
+renewelTitleLoan,renewe TLP,QFund,LoanTransactions_TitleLoan_PR,Vivek,Delete,
+rescindLoan,rescind PDL Origination,QFund,LoanTransactions_Transactions_Rescind_PR,Gowri,Delete,
+titleAmortization,TLP Amortization,QFund,LoanTransactions_TitleLoan_PR,Vivek,Delete,
+titleLoan,TLP Orgination,QFund,LoanTransactions_TitleLoan_PR,Vivek,Complete,
+titleLoanOverview,TLP Overview,QFund,LoanTransactions_TitleLoan_PR,Vivek,Delete,
+titleOutToRepo,title Repossession (Out to Repo),QFund,AdminTransaction_Repossession_OutToRepo_PR,Lee,Delete,
+titleOutToRepoVoid,title Repossession (Out to Repo Void),QFund,AdminTransaction_Repossession_OutToRepoVoid_PR,Lee,Delete,
+titleRepossession,title Repossession (Repossession),QFund,AdminTransaction_Repossession_Repossession_PR,Lee,Delete,
+titlePostDefaultTransactions,title PostDefaultTransactions,QFund,AdminTransactions_Title_PostDefaultTransactions_PR,Srikanth,Complete,25-Oct-18
+titleTransactions,title Transactions,QFund,LoanTransactions_Transactions_Title_PR,Srikanth,Complete,25-Oct-18
+transactions_LoanHistory,Transaction History,QFund,CustomerLoanHistory_PR,Manish,Complete,29-Jun-18
+transactionsVehicleConReport,TLP Vehicle Condition Report,QFund,VehicleConditionReport_PR,Manish,Complete,29-Jun-18
+transactionHistory_get,Fetch values from transactionHistory and store values,QFund,CustomerLoanHistory_PR,Gowri,Complete,
+titleVehicleConditionReport,TLP Vehicle Condition Report,QFund,LoanTransactions_TitleLoan_PR,Manish,Delete,29-Jun-18
+vehicledetailsVINvalidation,VINvalidation in TLP,QFund,LoanTransactions_TitleLoan_PR,Vivek,Delete,
+voidPayDayLoan,Void PDL Origination,QFund,PayDayLoan_Void_PR,Gowri,Complete,
+voidPayDayPayment,Void PDL Payment,QFund,PayDayVoidPayment_PR,Gowri,Complete,
+voidPayment,Void TLP Payment,QFund,LoanTransactions_Transactions_Void_PR,Vivek,Complete,
+voidRescindTitleLoan,Void or Rescind TLP Orgination,QFund,TitleLoan_VoidResind_PR,Vivek,Complete,
+LoanDecisioningProcess,Loan decisiong for all Loan,QFund,LoanDecisioning_PR,Gowri,Complete,
+storeStatusChange,Change store status from closed to open,QFund,AdminTransaction_QAJobs_ProcessDateChange_PR,Gowri,Complete,
+RPPEnrolment,PDL rpp enrollment,QFund,PayDayLoan_PR,Gowri,Complete,
+rPPPayment,PDL RPP payment and partial payment,QFund,PayDay_PartialPayment_PR,Gowri,Complete,
+locPaymentsMoneyOrder,LOC Payment via MoneyOrder,QFund,LoanTransaction_NewLoan_LOC_Payments_MoneyOrder_PR,Manish,Complete,
+emailDocumentDelivery,Checking the Email Constent in the TR History,QFund,CustomerLoanHistory_PR,Vivek,Complete,
+voidRPPEnrolment,Voiding RPP plan,QFund,PayDayLoan_PR,Gowri,Complete,
+vinValidation,VIN Validation to check the details of the Title,QFund,LoanTransactions_VINValidation_PR,Vivek,Complete,
+voidRppPaymentPlan,Voiding RPP Payments,QFund,PayDayVoidPayment_PR,Gowri,Complete,
+scheduleACH,PDL Scheduling ACH for Customer,QFund,PayDayLoan_PR,Gowri,Complete,
+titleTracking,This script handles title Tracking,QFund,LoanTransactions_TitleTracking_PR,Manish,Complete,
+initiateRPPdefaultReturn,RPP Default Return,QFund,PayDayLoan_PR,Gowri,Complete,
+checkACHStatus,PDL ACHStatus,QFund,PayDayLoan_PR,Gowri,Complete,
+achLoanTransactions,PDL ACH Transactions,QFund,LoanTransactions_Transactions_ACHTransactions_PR,Srikanth,Complete,
+CreateBulkLaon,CreateBulkLaon,QFund,Login_DateChange_Safe_Drawer_Registration_LoanOrigination_PR,Ibbu,Complete,
+brwrRegBanking_conv,Converted Customers Registration BankingTab,QFund,BorrowerRegistration_ConvertedCustomer_PR,Vivek,Complete,
+brwrRegIncome_conv,Converted Customers Registration IncomeTab,QFund,BorrowerRegistration_ConvertedCustomer_PR,Vivek,Complete,
+brwrRegOthers_Conv,Converted Customers Registration OthersTab,QFund,BorrowerRegistration_ConvertedCustomer_PR,Vivek,Complete,
+brwrRegPersonalInfo_conv,Converted Customers Registration PersonalTab,QFund,BorrowerRegistration_ConvertedCustomer_PR,Vivek,Complete,
+adminSafeDessign,Safe dessign from admin side,QFund,AdminTransaction_Drawer_Dessign_PR,Gowri,Complete,
+Online,,,,,,
+getCustomerInfo,Customer Details,QFund,AcccountCreationInOnlineAppalication_PR,Gowri,Complete,
+createOnlineAccount,Account creation in online,QFund,AcccountCreationInOnlineAppalication_PR,Gowri,Complete,
+PersonalInformation,Online Customer Registration,QFund,OnlineCustomerRegistration_PR,Gowri,Complete,
+NewCustomerPasswordCreation,Online new customer password and security question,QFund,OnlineCustomerRegistration_PR,Gowri,Complete,
+EmploymentInfo,online customer Employment Information,QFund,OnlineCustomerRegistration_PR,Gowri,Complete,
+BankinfInfo,online customer Banking Details,QFund,OnlineCustomerRegistration_PR,Gowri,Complete,
+SignUpAndSubmit_Appalication,online customer Submit Application,QFund,OnlineCustomerRegistration_PR,Gowri,Complete,
+PartialPayment_Online,Make Payment to the Loan through online,QFund,Online_PayDayLoanPayment_PR,Gowri,Complete,
+OnlineLogin,online User Login,QFund,AcccountCreationInOnlineAppalication_PR,Gowri,Complete,
+Installment,,,,,,
+InstallmentLoan,Originating Installment Loan,QFund,LoanTransactions_InstallmentLoan_PR,Chandu,Complete,
+InstallmetLoanPayments,Make Payments to the Loan,QFund,LoanTransactions_InstallmentLoan_PR,Chandu,Complete,
+InstallmentLoan_Void,Make Void to Loan,QFund,LoanTransactions_InstallmentLoan_PR,Chandu,Complete,
+InstallmentLoan_VoidPayments,Make Void to Payments,QFund,LoanTransactions_InstallmentLoan_PR,Chandu,Complete,
+Installment_DefaultPayment,Payment While in Default,QFund,LoanTransactions_InstallmentLoan_PR,Chandu,Complete,
+Installment_PaymentPlan,Payment Plan While in Default,QFund,LoanTransactions_InstallmentLoan_PR,Chandu,Complete,
+Installment_VoidPP,Void Payment Plan While in Default,QFund,LoanTransactions_InstallmentLoan_PR,Chandu,Inprogress,
+GetStoreNo,Getting admin store no,QFund,AdminSafeAndDrawerDessign_PR,Gowri,Complete,
+payDayWriteOffRecovery,Writeoff recovery,QFund,PayDay_PartialPayment_PR,Gowri,Complete,
+customerReports,bankruptcyReport,QFund,CustomerReports_PR,Gowri,Complete,
+adminOnlineProcessDateChange,Online Date chage,QFund,AdminTransaction_QAJobs_ProcessDateChange_PR,Chandu,Complete,
+PAM,,,,,,
+loanOriginationPAM,Originate the new online loan,PAM,LoanOrigination_PR,Harishankar,Complete,
+searchOnlineLoanbyPAM,Search By Applicant details,PAM,LoanOrigination_PR,Harishankar,Complete,
+verificationActionPAM,Verify the online loan process,PAM,LoanOrigination_PR,Harishankar,Complete,
+paydayACH_Revoke_Authorize,ACH Revoke Authorisation for Payday in CSR,QFund,LoanACHRevokeAuthorize_PR,Harishankar,Complete,
+pamPaydayBuyBack,Pam Buy Back Payment,PAM,Pam_Payoff_PR,Akhila,Complete,
+pamlocPayoff,Pam payoff payment,PAM,Pam_Payoff_PR,Akhila,Complete,
+pamPaydayVoidPayment,Pam Void payment,PAM,Pam_Payoff_PR,Akhila,Complete,
+payDayBuyBack,CSR BuyBack Payment,QFund,PayDay_PartialPayment_PR,Akhila,Complete,
+pamRescindPayDayLoan,CSR Rescind Loan,QFund,PayDayLoan_Void_PR,,Complete,
+pamvoidPayDayLoan,Pam Loan Void,QFund,PayDayLoan_Void_PR,,Complete,
+cashAtStore,cash At Store,QFund,PayDay_PartialPayment_PR,,Complete,
+pamPaydaypartialPayment,Pam Partial payment,PAM,Pam_Payoff_PR,,Complete,
+pamlocLoanDrawer,CSR and PAM Loan Drawer,QFund,LoanTransaction_NewLoan_LOC_PR,,Complete,
+loc_ACH_Revoke_Authorize,ACH Revoke Authorisation for LOC in CSR and PAM,QFund,LoanACHRevokeAuthorize_PR,,Complete,
+loc_RCC_Revoke_Authorize,RCC Revoke Authorisation for LOC in CSR and PAM,QFund,LoanACHRevokeAuthorize_PR,,Complete,
+pamEppInitiate,Initiate Epp in PAM,PAM,Pam_Payoff_PR,,Complete,
+pamlocVoidDraw,Void  the Draw Amount in CSR and PAM,PAM,Pam_Payoff_PR,,Complete,
+locVoidPayOff,Void  the Payoff Amount in CSR and PAM,QFund,LoanTransaction_NewLoan_LOC_VoidPayments_PR,,Complete,
+pamlocDrawNow,Draw the Amount In the Loan Origination,PAM,Pam_Payoff_PR,,Complete,
+pamrPPPayment,RppPayment for all the Tender Types,PAM,Pam_Payoff_PR,,Complete,
+Online EOD,,,,,,
+pamStartScheduler,Perform Online EOD process,PAM,Pam_StartScheduler_PR,Sameer,Complete,
+adminLOCPreACHDepositInserts,Perform deposit inserts as a part of Online EOD process,QFund,AdminTransaction_ACH_LOC_PR,Sameer,Complete,
+admnRCCPaymentBeforeDEFOrigFile,Perform RCC Payments as a part of Online EOD process,QFund,AdminTransaction_ACH_RCCPayments_PR,Sameer,Complete,
+admnRCCPaymentAfterDEFOrigFile,Perform RCC Payments as a part of Online EOD process,QFund,AdminTransaction_ACH_RCCPayments_PR,Sameer,Complete,
+adminLOCPreACHDeposit,Online EOD Process,QFund,AdminTransaction_ACH_LOC_PR,Sameer,In Progress,
+adminProcessLOCPreRCCDeposit,Online EOD Process,QFund,AdminTransaction_ACH_RCCPayments_PR,Sameer,In Progress,
+adminPDLPreNoteDepositProcess,Online EOD Process,QFund,AdminTransaction_QAJobs_PR,Sameer,In Progress,
+adminACHLOCACHClear,Online EOD Process,QFund,AdminTransaction_ACH_LOC_PR,Sameer,In Progress,
+Misc_Transactions,,,,,,
+MiscReceipts,Miscellaneous_Other_Receipts,QFund,Misc_Transaction_PR,Ibbu,Complete,
+MiscDisbursement,MiscDisbursement,QFund,Misc_Transaction_PR,Ibbu,Complete,
+Reports,,,,,,
+rep_CollectionReports,CollectionReports,QFund,Reports_CollectionReports_PR,Srikanth,WIP,
+rep_CustomerReports,CustomerReports,QFund,Reports_Customer_PR,Srikanth,WIP,
+rep_DailySummaryReports,DailySummaryReports,QFund,Reports_DailySummaryReports_PR,Srikanth,WIP,
+rep_LoanReports,LoanReports,QFund,Reports_LoanReports_PR,Srikanth,WIP,
+rep_OtherReports,OtherReports,QFund,Reports_OtherReports_PR,Srikanth,WIP,
