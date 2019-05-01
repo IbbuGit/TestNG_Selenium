@@ -1,0 +1,1 @@
+java -jar C:\Users\QAAUTOJENK1\Desktop\JenkinsFiles\agent.jar -jnlpUrl http://nasautoqa.advanceamerica.net:8000/computer/Slave1_Nasautoqa/slave-agent.jnlp -secret fa530000fd094f64381ad6ee5a2405396f6e94a885431725fc279d14dcf6553d -workDir "C:\Users\QAAUTOJENK1\Desktop\Jenkins_Root"

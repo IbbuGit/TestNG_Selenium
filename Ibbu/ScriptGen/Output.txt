@@ -1,0 +1,88 @@
+//****************************************************************************************************************************
+//Test Data Column Begin
+//****************************************************************************************************************************
+MD_Header
+MD_Disbursement_Type
+MD_Amt
+MD_Comments
+MD_Username
+MD_PIN
+MD_History_Button
+MD_FinishMiscDisbursements_Button
+MD_Cancel_Button
+
+//****************************************************************************************************************************
+//Test Data Column End
+//****************************************************************************************************************************
+//****************************************************************************************************************************
+//Getter and Setter Begin
+//****************************************************************************************************************************
+public String get_MD_Header(String TestData_MD_Header) {
+	return doIT(MD_Header, TestData_MD_Header);
+}
+
+public void set_MD_Disbursement_Type(String TestData_MD_Disbursement_Type) {
+	doIT(MD_Disbursement_Type, TestData_MD_Disbursement_Type);
+}
+
+public void set_MD_Amt(String TestData_MD_Amt) {
+	doIT(MD_Amt, TestData_MD_Amt);
+}
+
+public void set_MD_Comments(String TestData_MD_Comments) {
+	doIT(MD_Comments, TestData_MD_Comments);
+}
+
+public void set_MD_Username(String TestData_MD_Username) {
+	doIT(MD_Username, TestData_MD_Username);
+}
+
+public void set_MD_PIN(String TestData_MD_PIN) {
+	doIT(MD_PIN, TestData_MD_PIN);
+}
+
+public void click_MD_History_Button(String TestData_MD_History_Button) {
+	doIT(MD_History_Button, TestData_MD_History_Button);
+}
+
+public void click_MD_FinishMiscDisbursements_Button(String TestData_MD_FinishMiscDisbursements_Button) {
+	doIT(MD_FinishMiscDisbursements_Button, TestData_MD_FinishMiscDisbursements_Button);
+}
+
+public void click_MD_Cancel_Button(String TestData_MD_Cancel_Button) {
+	doIT(MD_Cancel_Button, TestData_MD_Cancel_Button);
+}
+
+//****************************************************************************************************************************
+//Getter and Setter End
+//****************************************************************************************************************************
+//****************************************************************************************************************************
+//Process Begin
+//****************************************************************************************************************************
+MiscsDisbursement_PO objMiscsDisbursement_PO	=	new MiscsDisbursement_PO(driver,report);
+
+Qfund_Navigation_PO objQfund_Navigation_PO	=	new Qfund_Navigation_PO (driver,report);
+objQfund_Navigation_PO.<<Your Page Navigation>>
+
+//objMiscsDisbursement_PO.get_MD_Header(data("MD_Header"));
+//objMiscsDisbursement_PO.isDisplayed_MD_Header(data("MD_Header"));
+
+assertAreEqual("Verification Point", report, objMiscsDisbursement_PO.get_MD_Header(data("MD_Header")), data("MD_Header"));
+
+objMiscsDisbursement_PO.set_MD_Disbursement_Type(data("MD_Disbursement_Type"));
+objMiscsDisbursement_PO.set_MD_Amt(data("MD_Amt"));
+objMiscsDisbursement_PO.set_MD_Comments(data("MD_Comments"));
+objMiscsDisbursement_PO.set_MD_Username(data("MD_Username"));
+objMiscsDisbursement_PO.set_MD_PIN(data("MD_PIN"));
+
+objMiscsDisbursement_PO.click_MD_History_Button(data("MD_History_Button"));
+
+
+objMiscsDisbursement_PO.click_MD_FinishMiscDisbursements_Button(data("MD_FinishMiscDisbursements_Button"));
+
+
+objMiscsDisbursement_PO.click_MD_Cancel_Button(data("MD_Cancel_Button"));
+
+//****************************************************************************************************************************
+//Process End
+//****************************************************************************************************************************
