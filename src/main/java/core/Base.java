@@ -59,7 +59,9 @@ public class Base extends SoftAssert {
 	String reportFolder = null;
 	
 	@BeforeSuite
-	public void beforeSuite() throws IOException {
+	public void beforeSuite(ITestContext context) throws IOException {
+		
+		System.out.println();
 		
 		reportFolder = Files.createTempDirectory(getDateAndTimeNow()).toAbsolutePath().toString();
 		extent = new ExtentReports(reportFolder+"\\Report.html", true);

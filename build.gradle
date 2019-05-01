@@ -38,6 +38,7 @@ dependencies {
 
 test {
     useTestNG() {
+    	systemProperty "Browser","CHROME"
         //dependsOn cleanTest
       	//useDefaultListeners = true
         suites "suites/Debug_Suite.xml"
