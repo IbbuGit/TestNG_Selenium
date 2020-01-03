@@ -1,0 +1,6 @@
+testName,login_Data,departmentName,departmentTitle,findProductTitle,countreceivedmessage,countProductTitle,countSubmittedTitle,freeScanUPC,user2Name,user2Password,deliUpc,selectAisle,userQuantity
+countMdcProducts,test_AccountE2E1,Comm Bakery,Select Department(s),Find Product,Count Received,Count Product,Count Submitted,0031254717031,SPM5001T06,eaP1TGzU329lzmoyCWKoU3eUOG7YSfhh,0001111044760,Aisle 29,60
+multiLocationFreeScan,test_AccountE2E1,Dry Grocery,Select Department(s),Find Product,Count Received,Count Product,Count Submitted,0001111042133;0007116920300,SPM5001T06,eaP1TGzU329lzmoyCWKoU3eUOG7YSfhh,0001111044760,Aisle 29,60
+departmentLockedStatus,test_AccountE2E1,Dairy,Select Department(s),Find Product,Count Received,Count Product,Count Submitted,00031254717031,SPM5001T06,eaP1TGzU329lzmoyCWKoU3eUOG7YSfhh,0001111044760,Aisle 29,60
+manualMdcScan,test_AccountE2E1,Bakery,Select Department(s),Find Product,Count Received,Count Product,Count Submitted,0001111060611;0001123307708,SPM5001T06,eaP1TGzU329lzmoyCWKoU3eUOG7YSfhh,0007027700005,Aisle 29,60
+backroomToMdc,test_AccountE2E1,Deli,Select Department(s),Find Product,Count Received,Count Product,Count Submitted,0001186311918,SPM5001T16,eaP1TGzU329lzmoyCWKoU3eUOG7YSfhh,0007027729040,Aisle 29,60

@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="DR_Smoke" configfailurepolicy="continue" >
+    <parameter name="grid" value="local"/>
+    <parameter name="udid" value="19237522505910"/>
+    <parameter name="mobilePlatformName" value="android"/>
+    <parameter name="mobilePlatformVersion" value="8.1"/>
+    <parameter name="androidDevice" value="real"/>
+    <parameter name="appiumPort" value="4723"/>
+    <parameter name="driverType" value="Appium"/>
+    <parameter name="wait" value="30"/>
+    <parameter name="androidApkPath" value="src\test\resources\directed_replenishment\apk\directedreplenishment-app-debug.apk"/>
+    <parameter name="androidApkPackage" value="com.kroger.mobile.sps.directedreplenishment.debug"/>
+    <parameter name="androidApkActivity" value="com.kroger.sps.mobile.app.StartupActivity"/>
+<!--    <parameter name="androidApkPath" value="src\test\resources\directed_replenishment\apk\app-0.32.1.apk"/>
+    <parameter name="androidApkPackage" value="com.kroger.sps.mobile"/>
+    <parameter name="androidApkActivity" value="com.kroger.sps.mobile.app.StartupActivity"/>-->
+
+
+    <test name="test">
+        <groups>
+            <run>
+                <include name="Regression"/>
+                <include name="Smoke"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="com.krogerqa.appium.product_locator_app.directed_replenishment.cases"></package>
+        </packages>
+    </test>
+</suite>

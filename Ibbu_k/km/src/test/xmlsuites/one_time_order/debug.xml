@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="One Time Order - Regression" >
+    <parameter name="grid" value="local"/>
+    <parameter name="udid" value="emulator-5554"/>
+    <parameter name="mobilePlatformName" value="android"/>
+    <parameter name="mobilePlatformVersion" value="8"/>
+    <parameter name="androidDevice" value="emulator-5554"/>
+    <parameter name="appiumPort" value="4723"/>
+    <parameter name="driverType" value="Appium"/>
+    <parameter name="wait" value="30"/>
+    <parameter name="androidApkPath" value="src\test\resources\one_time_order\apk\Release-0.30.9-qa.apk"/>
+    <parameter name="androidApkPackage" value="com.kroger.sps.mobile.qa"/>
+    <parameter name="androidApkActivity" value="com.kroger.sps.mobile.activity.StartupActivity"/>
+    <test name="One Time Order - Regression Suite">
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="com.krogerqa.appium.product_locator_app.one_time_order.cases"></package>
+        </packages>
+    </test>
+</suite>

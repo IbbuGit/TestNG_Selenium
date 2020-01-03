@@ -1,0 +1,11 @@
+testName,login_Data,productsToScan,scanproductScreen,enterUPC,manualOrScan,mainMenuPageTitle,messageTitle,reclamationMessage,limitedSticker,textCountTitle,incrVal
+verifySmokingCessation,test_AccountE2E1,0030766785750;0004126037119;0030766788050,Scan Product,Enter UPC,scanUPC,Main Menu,Smoking Cessation. Expires < 10 days? Send to Reclaim. Void in California,,,,1
+verifySeePharmacyManager,test_AccountE2E1,0035485980216;0030045020424,Scan Product,Enter UPC,scanUPC,Main Menu,See Pharmacy Manager or Store Manager for Return Instructions,,,,1
+itemUsedForSecondChance,test_AccountE2E1,0001111006182;0001111019890,Scan Product,Enter UPC,scanUPC,Main Menu,Will item be used for 2nd chance,,,,1
+itemNotUsedForSecondChance,test_AccountE2E1,0001111006182;0001111019890,Scan Product,Enter UPC,scanUPC,Main Menu,Will item be used for 2nd chance,,,,1
+theftReasonCode,test_AccountE2E1,0035485980216;0030045020424,Scan Product,Enter UPC,scanUPC,Main Menu,,,,,1
+reclaimCorpBrandMarkdown,test_AccountE2E1,0001996581188,Scan Product,Enter UPC,scanUPC,Main Menu,Is item leaking or damaged?,Send to Reclamation,Use Limited Qty Sticker,,0
+reclaimCorpBrandDiscard,test_AccountE2E1,0001996581188,Scan Product,Enter UPC,scanUPC,Main Menu,Is item leaking or damaged?,Send to Reclamation,Use Limited Qty Sticker,,1
+reclaimCorpBrandDonate,test_AccountE2E1,0001111000294,Scan Product,Enter UPC,scanUPC,Main Menu,Is item leaking or damaged?,Send to Reclamation,Use Limited Qty Sticker,,1
+donationLeakingItem,test_AccountE2E1,0000000003040;0000000003044,Scan Product,Enter UPC,scanUPC,Main Menu,Is item leaking or damaged?,,,,1
+recallYes,test_AccountE2E1,0000000003040;0000000003044,Scan Product,Enter UPC,scanUPC,Main Menu,,,,,1

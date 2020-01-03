@@ -1,0 +1,12 @@
+{
+  "app_loginCredentials": {
+    "username" : "SPM5001T08",
+    "encryptedPassword" : "6Bqp16sIaAa/omqIzkuNkXeUOG7YSfhh"
+  },
+  "element_text": {
+    "taskListTitle" : "Main Menu",
+    "reviewedOrdersTitle": "Reviewed Orders",
+    "productAdjustedBarText" : "Products Adjusted",
+    "scanProductText" : "Scan a Product \n to Review an Order"
+  }
+}

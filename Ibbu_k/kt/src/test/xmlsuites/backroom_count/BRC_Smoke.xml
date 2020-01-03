@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Back Room Count - Regression" >
+    <parameter name="grid" value="local"/>
+    <parameter name="udid" value="emulator-5554"/>
+    <parameter name="mobilePlatformName" value="android"/>
+    <parameter name="mobilePlatformVersion" value="8.1"/>
+    <parameter name="androidDevice" value="emulator-5554"/>
+    <parameter name="appiumPort" value="4723"/>
+    <parameter name="driverType" value="Appium"/>
+    <parameter name="wait" value="20"/>
+    <parameter name="androidApkPath" value="src\test\resources\backroom_count\apk\app-qa-0.29.04-445.apk"/>
+    <parameter name="androidApkPackage" value="com.kroger.sps.mobile.qa"/>
+    <parameter name="androidApkActivity" value="com.kroger.sps.mobile.LoginActivity"/>
+    <test name="Back Room Count - Regression">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="com.krogerqa.appium.product_locator_app.backroom_count.cases"></package>
+        </packages>
+    </test>
+</suite>

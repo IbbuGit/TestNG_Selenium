@@ -1,0 +1,31 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Fresh Assisted Ordering -- Regression Suite" >
+    <parameter name="grid" value="local"/>
+    <!--<parameter name="udid" value="18311521400294"></parameter>-->
+    <parameter name="udid" value="AVD1"/>
+    <parameter name="mobilePlatformName" value="android"/>
+    <parameter name="mobilePlatformVersion" value="8.1"/>
+    <parameter name="androidDevice" value="emulator"/>
+    <!--<parameter name="androidDevice" value="real"/>-->
+    <parameter name="appiumPort" value="4723"/>
+    <parameter name="systemPort" value="8204"/>
+    <parameter name="wait" value="30"/>
+    <parameter name="level" value="info"/>
+    <parameter name="driverType" value="Appium"/>
+    <parameter name="androidApkPath" value="src/test/resources/fresh_assisted_ordering/apk/freshorder-app-qa-0.1.0.apk"/>
+    <parameter name="androidApkPackage" value="com.kroger.mobile.sps.freshorder.debug"/>
+    <parameter name="androidApkActivity" value="com.kroger.mobile.sps.freshorder.TaskListActivity"/>
+    <parameter name="dataProviderPath" value="fresh_assisted_ordering/data/FAO_data.json"/>
+
+    <test name="FAO" parallel="false" thread-count="999">
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+
+        </groups>
+        <packages>
+            <package name="com.krogerqa.appium.product_locator_app.fresh_assisted_ordering.cases"/>
+        </packages>
+    </test>
+</suite>

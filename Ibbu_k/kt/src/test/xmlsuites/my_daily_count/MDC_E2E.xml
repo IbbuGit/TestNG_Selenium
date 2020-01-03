@@ -1,0 +1,24 @@
+<suite name="My Daily Count -- E2E Suite" >
+    <parameter name="grid" value="local"/>
+    <parameter name="udid" value="emulator-5554"/>
+    <parameter name="mobilePlatformName" value="android"/>
+    <parameter name="mobilePlatformVersion" value="8.1"/>
+    <parameter name="androidDevice" value="ZebraTC20"/>
+    <parameter name="appiumPort" value="4723"/>
+    <parameter name="driverType" value="Appium"/>
+    <parameter name="wait" value="30"/>
+    <parameter name="androidApkPath" value="src\test\resources\my_daily_count\apk\app-qa-0.28.01-960.apk"/>
+    <parameter name="androidApkPackage" value="com.kroger.sps.mobile.qa"/>
+    <parameter name="androidApkActivity" value="com.kroger.sps.mobile.LoginActivity"/>
+
+    <test name="My Daily Count -- E2E Suite">
+        <groups>
+            <run>
+                <include name="e2e"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="com.krogerqa.appium.product_locator_app.my_daily_count.cases"/>
+        </packages>
+    </test>
+</suite>

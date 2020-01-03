@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Section Check Test Suite" >
+    <parameter name="grid" value="local"/>
+    <parameter name="udid" value="ZebraTC52"/>
+    <parameter name="mobilePlatformName" value="Android"/>
+    <parameter name="mobilePlatformVersion" value="8.1"/>
+    <parameter name="androidDevice" value="emulator"/>
+    <parameter name="appiumPort" value="4723"/>
+    <parameter name="driverType" value="Appium"/>
+    <parameter name="waidumpsys window windows | grep -E ‘mCurrentFocus’t" value="30"/>
+    <parameter name="androidApkPath" value="src\test\resources\section_check/apk/app-qa-0.30.5.apk"/>
+    <parameter name="androidApkPackage" value="com.kroger.sps.mobile.qa"/>
+    <parameter name="androidApkActivity" value="com.kroger.sps.mobile.activity.StartupActivity"/>
+    <test name="Section Check - Regression Suite">
+        <groups>
+            <run>
+                <include name="Func"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="com.krogerqa.appium.product_locator_app.section_check.cases"></package>
+        </packages>
+    </test>
+</suite>

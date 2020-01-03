@@ -1,0 +1,7 @@
+testName,login_Data,manualOrScan,productToScan,countProductScreen,reviewProductScreen,scanProductScreen,enterUPC,thankYouText,titleThankYouScreen,productCount,unauthorizedDSDMsg,somethingWentWrongAlertTitle,unableToProceedAlertTitle
+addProductFrom_ReviewPage,test_AccountE2E1,scanUPC,0000000003141;0000000003040,Count Product,Review Count,Scan Product,Enter UPC,Thank You!,Count Submitted,,,Something Went Wrong,Unable to Proceed
+removeProductFrom_ReviewPage,test_AccountE2E1,scanUPC,0000000003141;0000000003040;0001111000151,Count Product,Review Count,Scan Product,Enter UPC,Thank You!,Count Submitted,,,Something Went Wrong,Unable to Proceed
+updateProductFrom_ReviewPage,test_AccountE2E1,scanUPC,0000000003141;0000000003040;0001111000151,Count Product,Review Count,Scan Product,Enter UPC,Thank You!,Count Submitted,,,Something Went Wrong,Unable to Proceed
+validateUnSubmittedWork,test_AccountE2E1,scanUPC,0000000003141;0000000003040;0001111000151,Count Product,Review Count,Scan Product,Enter UPC,Thank You!,Count Submitted,,,Something Went Wrong,Unable to Proceed
+scanAndSaveMultipleProducts,test_AccountE2E1,scanUPC,0000000003141;0000000004011;0001111037673,Count Product,Review Count,Scan Product,Enter UPC,Thank You!,Count Submitted,,,Something Went Wrong,Unable to Proceed
+verifyTotalUnitsCount,test_AccountE2E1,scanUPC,0000000003141;0000000003040;0001111000189,Count Product,Review Count,Scan Product,Enter UPC,Thank You!,Count Submitted,,,Something Went Wrong,Unable to Proceed

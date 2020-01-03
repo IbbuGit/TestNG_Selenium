@@ -1,0 +1,5 @@
+testName,login_Data,scanOrManualEntry,productToScan
+addItemsVerifyInReviewPage,test_AccountE2E1,scanUPC,0001111000801;0001111000324
+updateItemsVerifyInReviewPage,test_AccountE2E1,scanUPC,0001111000801;0001111000324
+deleteItemsVerifyInReviewPage,test_AccountE2E1,scanUPC,0001111000297;0001111000295
+sessionVerifyInReviewPage,test_AccountE2E1,scanUPC,0001111000297;0001111000295

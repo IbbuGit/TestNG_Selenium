@@ -1,0 +1,18 @@
+testName,login_Data,productToScan,productsToScan,scanproductScreen,enterUPC,manualOrScan,mainMenuPageTitle
+loginTest_RFI,test_Account2,scanUPC,,Scan Product,Enter UPC,scanUPC,Main Menu
+manualUPCEntry_RFI,test_Account2,scanUPC,0004126035111,Scan Product,Enter UPC,scanUPC,Main Menu
+scanProduct_RFI,test_Account2,0000000004085,0001510000043;0004100000753,Enter UPC,scanUPC,scanUPC,Main Menu
+manualMultipleUPCEntry_RFI,test_Account2,scanUPC,0004126035111;0001111000120,Enter UPC,scanUPC,Main Menu,
+manualAndScanMultipleUPCEntry_RFI,test_Account2,0000000004085,0001510000043;0001111000120,Enter UPC,scanUPC,scanUPC,Main Menu
+manualUPCEntryHappyPath_RFI,test_Account2,scanUPC,0004126035111;0001111000120,Enter UPC,scanUPC,Main Menu,
+exitRFIFunctionality_RFI,test_Account2,scanUPC,0004126035111;0001111000120;0001510000043,Enter UPC,scanUPC,Main Menu,
+outdatedSecondChanceFLow_RFI,test_Account2,scanUPC,0004157354987,Enter UPC,scanUPC,Main Menu,
+recallFlow_RFI,test_Account2,scanUPC,0001111000120;0031254723779,Enter UPC,scanUPC,Main Menu,
+reclaimFLow_RFI,test_Account2,scanUPC,0000000004011;0001111000120;0004126038448;0004157354987,Enter UPC,scanUPC,Main Menu,
+donationFlow_RFI,test_Account2,scanUPC,0030766143020,Enter UPC,scanUPC,Main Menu,
+theftFlow_RFI,test_Account2,scanUPC,0004126035111;0001111000120,Enter UPC,scanUPC,Main Menu,
+damagedFLow_RFI,test_Account2,scanUPC,0008155555607;0030081067020,Enter UPC,scanUPC,Main Menu,
+UPCHandlingFLow_RFI,test_Account2,scanUPC,0004126035111;0001111000120;0000000004085;0001510000043;0004126035420,Enter UPC,scanUPC,Main Menu,
+backButtonFLow_RFI,test_Account2,scanUPC,0004126035111,Enter UPC,scanUPC,Main Menu,
+donationBannerFLow_RFI,test_Account2,scanUPC,0009410000830;0003410000357,Enter UPC,scanUPC,Main Menu,
+magicItemTheftFLow_RFI,test_Account2,scanUPC,0004122681623;0000000005555;0004126035111,Enter UPC,scanUPC,Main Menu,

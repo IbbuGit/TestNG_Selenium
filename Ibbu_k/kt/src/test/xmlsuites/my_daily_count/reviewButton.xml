@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="debug" >
+    <parameter name="grid" value="local"/>
+    <parameter name="udid" value="TC-20"/>
+    <parameter name="mobilePlatformName" value="android"/>
+    <parameter name="mobilePlatformVersion" value="8.1"/>
+    <parameter name="androidDevice" value="emulator"/>
+    <parameter name="appiumPort" value="4723"/>
+    <parameter name="driverType" value="Appium"/>
+    <parameter name="wait" value="20"/>
+    <parameter name="androidApkPath" value="src\test\resources\my_daily_count\apk\app-debug.apk"/>
+    <parameter name="androidApkPackage" value="com.kroger.sps.mobile.debug"/>
+    <parameter name="androidApkActivity" value="com.kroger.sps.mobile.activity.StartupActivity"/>
+
+    <test name="test">
+        <groups>
+            <run>
+                <include name="debug"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="com.krogerqa.appium.product_locator_app.my_daily_count.cases"/>
+
+        </packages>
+    </test>
+</suite>

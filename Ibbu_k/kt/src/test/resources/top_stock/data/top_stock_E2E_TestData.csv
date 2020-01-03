@@ -1,0 +1,6 @@
+testName,login_Data,upcNo,productName,stockHeader,stockBtn,scanProductHeader,productStatus,nonStockBtn,reviewBtn,finishBtn,reviewHeader,completeHeader,completeThankMsg,completeTxtMsg,scanOREntryUPC,balanceUnit
+topSessionE2EFlowForStockAndNotStockAndSavedSessionExists,test_AccountE2E1,0061611203198;0061611203195,Mt. Olive Kosher Dill Pickle Spears,Stock Shelf,STOCKED,Scan Product,,,REVIEW,FINISH,Review,Complete,Thank you!,You completed Top Stock!,scanUPC,5
+stockProductAndVerifyInReviewPageWithUpdateBOH,test_AccountE2E1,0002700041911,Mt. Olive Kosher Dill Pickle Spears,Stock Shelf,STOCKED,Scan Product,No Stocking Needed,,REVIEW,FINISH,Review,Complete,Thank you!,You completed Top Stock!,scanUPC,5
+savedSessionExistsAndSubmitItAndNoStockingNeededMessage,test_AccountE2E1,0004126035294,Mt. Olive Kosher Dill Pickle Spears,Stock Shelf,STOCKED,Scan Product,No Stocking Needed,,REVIEW,FINISH,Review,Complete,Thank you!,You completed Top Stock!,scanUPC,5
+notStockedProductAndVerifyInReviewPage,test_AccountE2E1,0001070006080,Mt. Olive Kosher Dill Pickle Spears,Stock Shelf,STOCKED,Scan Product,No Stocking Needed,,REVIEW,FINISH,Review,Complete,Thank you!,You completed Top Stock!,scanUPC,5
+

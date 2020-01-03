@@ -1,0 +1,38 @@
+{
+  "tc_UpdateBOHInventoryAllBuckets": [
+    {
+      "rowID": "tc_UpdateBOHInventoryAllBuckets.01",
+      "description": "Start shopping",
+      "environment": "TEST",
+      "body" : {
+        "store": "00445",
+        "source": "DR",
+        "division": "014",
+        "upcList": [
+          {
+            "baseUpc": "0003600037306",
+            "trailerUpc": "0003600037306",
+            "reasonCodeType": "R",
+            "location": "STO_QOD",
+            "scanQty": "-1"
+          },
+          {
+            "baseUpc": "0003600037306",
+            "trailerUpc": "0003600037306",
+            "reasonCodeType": "R",
+            "location": "STO_QIK",
+            "scanQty": "-1"
+          },
+          {
+            "baseUpc": "0003600037306",
+            "trailerUpc": "0003600037306",
+            "reasonCodeType": "R",
+            "location": "STO_QIB",
+            "scanQty": "-1"
+          }
+        ]
+      }
+    }
+  ]
+}
+
