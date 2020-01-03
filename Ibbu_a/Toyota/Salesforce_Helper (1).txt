@@ -1,0 +1,258 @@
+package HELPER;
+
+import java.util.Date;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class SA_HELPER extends arts_HELPER{
+	
+	@FindBy(xpath = "//*[@class='x-tab-strip-text  x-tab-loading']")	List<WebElement> tabLoader;
+	@FindBy(xpath = "//iframe[@allow]")	List<WebElement> Frames;
+	
+	@FindBy(xpath = "(//div[contains(@class,'x-tab-tabmenu-right')])[1]")	WebElement tabMenu;
+	@FindBy(xpath = "//*[contains(text(),'Close all primary tabs')]")	WebElement ClossAllTab;
+	
+	@FindBy(id="userNavLabel")WebElement UserIcon;
+	@FindBy(id="app_logout")WebElement UserLogout;
+	
+	public SA_HELPER(LinkedHashMap<String, Object> ComponentArgument) {initializaTAF(this,ComponentArgument);}
+
+	public void saSetFrame(EventFiringWebDriver Driver,WebElement FrameFinder) throws InterruptedException {
+		System.out.println("Befor:saSetFrame check:"+getElapsedTime());
+		Driver.switchTo().defaultContent();
+		Driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+		try {new WebDriverWait(Driver, 20).until(ExpectedConditions.invisibilityOfAllElements(tabLoader));}catch (Exception e) {}
+		//System.out.println("After:Loader check:"+getElapsedTime());
+
+		long startTime = System.currentTimeMillis();
+		long elapsedTime = 0;
+		boolean FoundFrame =false;
+		while (elapsedTime < 60 * 1000 && !FoundFrame) {
+			//System.out.println("Before:iframe find"+getElapsedTime());
+			//List<WebElement> Frames1=Driver.findElements(By.xpath(""));
+			//System.out.println("After:iframe find"+getElapsedTime());
+			for(WebElement Frame : Frames) {
+				try {
+					//System.out.println("Before:iframe Displayed"+getElapsedTime());
+					if(Frame.isDisplayed()) {
+						//System.out.println("After Displayed"+getElapsedTime());
+						Driver.switchTo().frame(Frame);
+						try {							
+							//System.out.println("Before:FrameFinder Displayed"+getElapsedTime());
+							FrameFinder.isDisplayed();
+							//System.out.println("After FrameFinder Displayed"+getElapsedTime());
+							FoundFrame=true;
+							break;
+						}catch (Exception e) {
+							//List<WebElement> Frames2=Driver.findElements(By.xpath("//iframe[@allow]"));
+							if(Frames.size()>1) {
+								if(saSetFrameForSeconLevel(Driver,Frames,FrameFinder)) {FoundFrame=true;break;}								
+							}else {Driver.switchTo().defaultContent();}
+						}						
+					}
+				} catch (Exception e) {
+					Driver.switchTo().defaultContent();
+					try {new WebDriverWait(Driver, 20).until(ExpectedConditions.invisibilityOfAllElements(tabLoader));}catch (Exception e1) {}
+				}				
+			}
+
+			elapsedTime = (new Date()).getTime() - startTime;
+		}
+		Driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		System.out.println("After:saSetFrame check:"+getElapsedTime());
+	}
+
+	public boolean saSetFrameForSeconLevel(EventFiringWebDriver Driver,List<WebElement> ParentFrames,WebElement FrameFinder) throws InterruptedException {
+		boolean Found=false;
+		for(WebElement Frame : ParentFrames) {
+			try {
+				if(Frame.isDisplayed()) {					
+					Driver.switchTo().frame(Frame);
+					try {
+						FrameFinder.isDisplayed();							
+						Found=true;
+						break;
+					}catch (Exception e) {
+						if(Frames.size()>1) {
+							System.out.println("3 level frame found");
+						}
+					}
+				}
+			} catch (Exception e) {}				
+		}
+		return Found;
+
+	}
+
+
+	public void saDoublClickToEnableElement(EventFiringWebDriver Driver,String ColText) throws Exception {
+		waitForPageLoad(Driver);
+
+		WebElement Element=Driver.findElement(By.xpath("//td[@class='labelCol' and text()='"+ColText+"']/following-sibling::td[1]"));
+
+		String doubleClickJS = "if(document.createEvent){var evObj = document.createEvent('MouseEvents');evObj.initEvent('dblclick',"+
+				"true, false); arguments[0].dispatchEvent(evObj);} else if(document.createEventObject)"+
+				"{ arguments[0].fireEvent('ondblclick');}";
+
+		JavascriptExecutor js = (JavascriptExecutor) Driver;
+		js.executeScript(doubleClickJS, Element);		
+	}
+
+	public void saCloseAllOpenTabs() {
+
+		if(tabMenu.isDisplayed()) {
+			tabMenu.click();
+			ClossAllTab.click();
+		}
+	}
+	
+	public void saLogout(EventFiringWebDriver Driver) {
+		Driver.switchTo().defaultContent();
+		UserIcon.click();
+		waitAndClick(Driver, UserLogout);
+		saCloseAllOpenTabs();
+	}
+
+	public void saSearch(EventFiringWebDriver Driver,String Val) throws InterruptedException {
+		Driver.findElement(By.xpath("//input[@id='phSearchInput']")).sendKeys(Val);
+		Thread.sleep(2000);
+		//waitForAnElement(Driver,"//img[@alt='User']");
+		waitAndClick(Driver,Driver.findElement(By.xpath("//img[@alt='User']")));
+		waitAndClick(Driver,Driver.findElement(By.xpath("//span[@class='tabText' and text()='"+Val+"']")));
+	}
+
+
+	public WebElement GetVisibleElement(List<WebElement> elements) {
+		WebElement Found=null;
+		for(WebElement temp: elements) {
+			if(temp.isDisplayed()) {Found=temp;}
+		}
+		return Found;
+	}
+
+	public boolean  waitAndClick(EventFiringWebDriver Driver,WebElement element) {
+		Driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);		
+		boolean Found = false;
+
+		long startTime = System.currentTimeMillis();
+		long elapsedTime = 0;
+
+		while (elapsedTime < 20 * 1000 && !Found) {		
+			try {
+
+				if(!element.isDisplayed()) {
+					Found=false;
+				}else {
+					new WebDriverWait(Driver, 20).until(ExpectedConditions.elementToBeClickable(element));
+					element.click();
+					Found=true;
+				}
+			}
+			catch (Exception e) {
+				Found=false;
+			}			
+			elapsedTime = (new Date()).getTime() - startTime;
+		}
+		Driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		return Found;		
+	}
+
+	public boolean  waitAndSendKeys(EventFiringWebDriver Driver,WebElement element,String value) {
+		Driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);		
+		boolean Found = false;
+
+		long startTime = System.currentTimeMillis();
+		long elapsedTime = 0;
+
+		while (elapsedTime < 20 * 1000 && !Found) {		
+			try {
+				new WebDriverWait(Driver, 20).until(ExpectedConditions.visibilityOf(element));
+				new WebDriverWait(Driver, 20).until(ExpectedConditions.elementToBeClickable(element));
+
+				if(!element.isDisplayed()) {
+					Found=false;
+				}else {element.sendKeys(value);Found=true;}
+			}
+			catch (Exception e) {
+				Found=false;
+			}			
+			elapsedTime = (new Date()).getTime() - startTime;
+		}
+		Driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		return Found;		
+	}
+
+	public boolean  waitForAnElement(EventFiringWebDriver Driver,String locator) {
+		Driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);		
+		boolean Found = false;
+
+		long startTime = System.currentTimeMillis();
+		long elapsedTime = 0;
+
+		while (elapsedTime < 20 * 1000 && !Found) {		
+			try {
+				WebElement element=Driver.findElement(By.xpath(locator));
+				if(!element.isDisplayed()) {
+					Found=false;
+				}else {Found=true;}
+			}
+			catch (Exception e) {
+				Found=false;
+			}			
+			elapsedTime = (new Date()).getTime() - startTime;
+		}
+		Driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		return Found;		
+	}
+
+
+	public WebElement getCalenderCurrentDateElement(EventFiringWebDriver Driver,String FromCurrentDate) {
+		WebElement element = null;
+		int Currentdate=Integer.valueOf(Driver.findElement(By.xpath("//td[contains(@class,'today')]")).getText());
+		String ExpDate = null;
+
+		if(FromCurrentDate.contains("-")) {
+			ExpDate=String.valueOf(Currentdate-(Integer.valueOf(FromCurrentDate.replace("-", ""))));			
+		}else if(FromCurrentDate.contains("+")) {
+			ExpDate=String.valueOf(Currentdate+(Integer.valueOf(FromCurrentDate.replace("+", ""))));
+		}
+
+		element=Driver.findElement(By.xpath("//td[text()='"+ExpDate+"' and not(contains(@class,'prevMonth'))]"));
+
+		return element;
+	}
+
+	// =================================================
+	public String getElapsedTime() {
+		// calculate the difference between to date/times and create string in
+		// the format of hours, minutes, seconds, milliseconds (00:00:00:000)
+		Date dtEndTime = new Date();
+		long dtDiff = dtEndTime.getTime();
+		long diffMilliSeconds = (dtDiff % 1000);
+		long diffSeconds = dtDiff / 1000 % 60;
+		long diffMinutes = dtDiff / (60 * 1000) % 60;
+		long diffHours = dtDiff / (60 * 60 * 1000);
+		String strDiffMilliSeconds = String.valueOf(diffMilliSeconds) + "000";
+
+		return String.valueOf(diffHours)+ ":" + String.valueOf(diffMinutes+ ":" + String.valueOf(diffSeconds)+ ":"
+				+ strDiffMilliSeconds.substring(0, 3)) ;
+	}
+
+	// =================================================
+	public String pad(Object objX, String strChar) {
+		// format string values too two characters (00) prefixing one or two
+		// zeros as needed to maintain format)
+		String strX = String.valueOf(objX);
+		return new String(new char[3 - strX.length()]).replace("\0", strChar) + strX;
+	}
+}

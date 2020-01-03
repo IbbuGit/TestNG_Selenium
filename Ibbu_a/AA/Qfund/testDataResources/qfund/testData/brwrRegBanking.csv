@@ -1,0 +1,50 @@
+DataName,brb_Validation,Mode,brb_BankStatus,brb_AcctVerDate,brb_BankStatEndDate,brb_RoutingNbr,brb_ConfirmRoutingNbr,brb_CheckAcctNbr,brb_ConfirmCheckAcctNbr,brb_ValidationMsg
+LOC_Customer_Reg,,New,,05/01/2018,,111111118,SAME AS ROUTING NBR,Random,SAME AS ACCT NBR,
+Title_Customer_Reg,,New,,05/01/2018,,111111118,SAME AS ROUTING NBR,Random,SAME AS ACCT NBR,
+PDL_Customer_Reg,,New,,05/01/2018,,CDF(StateData.RoutingNo),SAME AS ROUTING NBR,Random,SAME AS ACCT NBR,
+INST_Reg_Banking,,New,,02/19/2019,,CDF(StateData.RoutingNo),SAME AS ROUTING NBR,Random,SAME AS ACCT NBR,
+PDL_Customer_Reg_FL,,New,,05/01/2018,,253272148,SAME AS ROUTING NBR,Random,SAME AS ACCT NBR,
+Edit_BankStatusTo_Inactive,,Edit,Inactive,,,,,,,
+PDL_ConvertedCustomer,,ConvCustomer,,05/01/2018,,,,,,
+Edit_BankStatusTo_Close,,Edit,Closed,,,,,,,
+LOC_AcctVerDate_Blank,Negative,New,,,,,,,,Account Verification Date cannot be left blank. Please enter information.
+TLP_AcctVerDate_Blank,Negative,New,,,,,,,,Account Verification Date cannot be left blank. Please enter information.
+PDL_AcctVerDate_Blank,Negative,New,,,,,,,,Account Verification Date cannot be left blank. Please enter information.
+LOC_AcctVerDate_Future,Negative,New,,01/01/2021,,,,,,Account Verification Date cannot be in the future. Please re-enter.
+TLP_AcctVerDate_Future,Negative,New,,01/01/2021,,,,,,Account Verification Date cannot be in the future. Please re-enter.
+PDL_AcctVerDate_Future,Negative,New,,01/01/2021,,,,,,Account Verification Date cannot be in the future. Please re-enter.
+LOC_ABARoutingNbr_Blank,Negative,New,,05/01/2018,,,,,,ABA/Routing Nbr should not be left blank. Please enter information.
+TLP_ABARoutingNbr_Blank,Negative,New,,05/01/2018,,,,,,ABA/Routing Nbr should not be left blank. Please enter information.
+PDL_ABARoutingNbr_Blank,Negative,New,,05/01/2018,,,,,,ABA/Routing Nbr should not be left blank. Please enter information.
+LOC_ConfirmABARoutingNbr_Blank,Negative,New,,05/01/2018,,111111118,,,,Please enter Confirm ABA/Routing Nbr
+TLP_ConfirmABARoutingNbr_Blank,Negative,New,,05/01/2018,,111111118,,,,Please enter Confirm ABA/Routing Nbr
+PDL_ConfirmABARoutingNbr_Blank,Negative,New,,05/01/2018,,111111118,,,,Please enter Confirm ABA/Routing Nbr
+LOC_ABARouting_ConfirmABARoutingNbr_MIsmatch,Negative,New,,05/01/2018,,111111118,123456789,,,Please enter same ABA Nbr's
+TLP_ABARouting_ConfirmABARoutingNbr_MIsmatch,Negative,New,,05/01/2018,,111111118,123456789,,,Please enter same ABA Nbr's
+PDL_ABARouting_ConfirmABARoutingNbr_MIsmatch,Negative,New,,05/01/2018,,111111118,123456789,,,Please enter same ABA Nbr's
+LOC_ABARouting_LessThan9Digit,Negative,New,,05/01/2018,,12345678,12345678,,,ABA/Routing Nbr must be at least 9 digits. Please re-enter.
+TLP_ABARouting_LessThan9Digit,Negative,New,,05/01/2018,,12345678,12345678,,,ABA/Routing Nbr must be at least 9 digits. Please re-enter.
+PDL_ABARouting_LessThan9Digit,Negative,New,,05/01/2018,,12345678,12345678,,,ABA/Routing Nbr must be at least 9 digits. Please re-enter.
+LOC_CheckingAcctNbr_Blank,Negative,New,,05/01/2018,,111111118,SAME AS ROUTING NBR,,,Chkg Acct Nbr should not be left blank. Please enter information.
+TLP_CheckingAcctNbr_Blank,Negative,New,,05/01/2018,,111111118,SAME AS ROUTING NBR,,,Chkg Acct Nbr should not be left blank. Please enter information.
+PDL_CheckingAcctNbr_Blank,Negative,New,,05/01/2018,,111111118,SAME AS ROUTING NBR,,,Chkg Acct Nbr should not be left blank. Please enter information.
+LOC_ConfirmCheckingAcctNbr_Blank,Negative,New,,05/01/2018,,111111118,SAME AS ROUTING NBR,Random,,Please enter Confirm Chkg Acct Nbr
+TLP_ConfirmCheckingAcctNbr_Blank,Negative,New,,05/01/2018,,111111118,SAME AS ROUTING NBR,Random,,Please enter Confirm Chkg Acct Nbr
+PDL_ConfirmCheckingAcctNbr_Blank,Negative,New,,05/01/2018,,111111118,SAME AS ROUTING NBR,Random,,Please enter Confirm Chkg Acct Nbr
+LOC_CheckingAcct_ConfirmCheckingAcctNbr_MIsmatch,Negative,New,,05/01/2018,,111111118,SAME AS ROUTING NBR,1234567,123456,Please enter same Chkg Acct Nbr's
+TLP_CheckingAcct_ConfirmCheckingAcctNbr_MIsmatch,Negative,New,,05/01/2018,,111111118,SAME AS ROUTING NBR,1234567,123456,Please enter same Chkg Acct Nbr's
+PDL_CheckingAcct_ConfirmCheckingAcctNbr_MIsmatch,Negative,New,,05/01/2018,,111111118,SAME AS ROUTING NBR,1234567,123456,Please enter same Chkg Acct Nbr's
+LOC_ChkgAcct_LessThan4Digit,Negative,New,,05/01/2018,,111111118,SAME AS ROUTING NBR,123,123,Chkg Acct Nbr must be at least 4 digits. Please re-enter.
+TLP_ChkgAcct_LessThan4Digit,Negative,New,,05/01/2018,,111111118,SAME AS ROUTING NBR,123,123,Chkg Acct Nbr must be at least 4 digits. Please re-enter.
+PDL_ChkgAcct_LessThan4Digit,Negative,New,,05/01/2018,,111111118,SAME AS ROUTING NBR,123,123,Chkg Acct Nbr must be at least 4 digits. Please re-enter.
+INST_AcctVerDate_Blank,Negative,New,,,,,,,,Account Verification Date cannot be left blank. Please enter information.
+INST_AcctVerDate_Future,Negative,New,,1/1/2021,,,,,,Account Verification Date cannot be in the future. Please re-enter.
+INST_ABARoutingNbr_Blank,Negative,New,,5/1/2018,,,,,,ABA/Routing Nbr should not be left blank. Please enter information.
+INST_ConfirmABARoutingNbr_Blank,Negative,New,,5/1/2018,,111111118,,,,Please enter Confirm ABA/Routing Nbr
+INST_ABARouting_ConfirmABARoutingNbr_MIsmatch,Negative,New,,5/1/2018,,111111118,123456789,,,Please enter same ABA Nbr's
+INST_ABARouting_LessThan9Digit,Negative,New,,5/1/2018,,12345678,12345678,,,ABA/Routing Nbr must be at least 9 digits. Please re-enter.
+INST_CheckingAcctNbr_Blank,Negative,New,,5/1/2018,,111111118,SAME AS ROUTING NBR,,,Chkg Acct Nbr should not be left blank. Please enter information.
+INST_ConfirmCheckingAcctNbr_Blank,Negative,New,,5/1/2018,,111111118,SAME AS ROUTING NBR,Random,,Please enter Confirm Chkg Acct Nbr
+INST_CheckingAcct_ConfirmCheckingAcctNbr_MIsmatch,Negative,New,,5/1/2018,,111111118,SAME AS ROUTING NBR,1234567,123456,Please enter same Chkg Acct Nbr's
+INST_ChkgAcct_LessThan4Digit,Negative,New,,5/1/2018,,111111118,SAME AS ROUTING NBR,123,123,Chkg Acct Nbr must be at least 4 digits. Please re-enter.
+INST,,,,,,,,,,

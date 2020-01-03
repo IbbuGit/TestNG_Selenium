@@ -1,0 +1,101 @@
+public  int getContElementTop(WebElement container, WebElement element) {
+		return (getyCoordinate(element) - getyCoordinate(container));
+
+	}
+
+	public  int getContElementBottom(WebDriver driver, WebElement containerElement, WebElement element) {
+		return (getBottom(driver, element) - getBottom(driver, containerElement));
+
+	}
+
+	public  int getContElementLeft(WebElement container, WebElement insidecontainer) {
+		return (getLeft(insidecontainer) - getLeft(container));
+
+	}
+
+	public  int getCont(String s2, WebElement... container) {
+		return 20;
+
+	}
+
+	public  int getContElementRight(WebDriver driver, WebElement container, WebElement insidecontainer) {
+		return (getRight(driver, insidecontainer) - getRight(driver, container));
+
+	}
+
+	public  int getElementDifference(WebElement element1, WebElement element2) {
+		return (getyCoordinate(element2) - getyCoordinate(element1) - getHeight(element1));
+
+	}
+
+	public  int getTop(WebElement element) {
+		return getyCoordinate(element);
+	}
+
+	public  int getLeft(WebElement element) {
+		return getxCoordinate(element);
+	}
+
+	public  int getRight(WebDriver driver, WebElement element) {
+		return getScreenWidth(driver) - getxCoordinate(element) - getWidth(element);
+	}
+
+	public  int getBottom(WebDriver driver, WebElement element) {
+		return getScreenHeight(driver) - getyCoordinate(element) - getHeight(element);
+	}
+
+	public  int getScreenWidth(WebDriver driver) {
+
+		Object width = ((JavascriptExecutor) driver).executeScript("return document.documentElement.clientWidth");
+		return Integer.parseInt(width.toString());
+
+	}
+
+	public  boolean isAlignedRight(WebDriver driver, WebElement element1, WebElement element2) {
+		return (getRight(driver, element1) == getRight(driver, element2));
+	}
+
+	public  boolean isAlignedLeft(WebElement element1, WebElement element2) {
+		return (getLeft(element1) == getLeft(element2));
+	}
+
+	public  int getScreenHeight(WebDriver driver) {
+
+		Object height = ((JavascriptExecutor) driver).executeScript("return document.documentElement.clientHeight");
+		return Integer.parseInt(height.toString());
+
+	}
+
+	public  int getHeight(WebElement element) {
+
+		Dimension dimension = element.getSize();
+
+		int height = dimension.getHeight();
+
+		return height;
+
+	}
+
+	public  int getWidth(WebElement element) {
+
+		Dimension dimension = element.getSize();
+
+		int width = dimension.getWidth();
+
+		return width;
+
+	}
+
+	public  int getxCoordinate(WebElement element) {
+
+		Point point = element.getLocation();
+		int xcoord = point.x;
+		return xcoord;
+	}
+
+	public  int getyCoordinate(WebElement element) {
+
+		Point point = element.getLocation();
+		int ycoord = point.y;
+		return ycoord;
+	}

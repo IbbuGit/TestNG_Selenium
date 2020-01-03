@@ -1,0 +1,42 @@
+package modules.QFund;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+import com.relevantcodes.extentreports.ExtentTest;
+
+import pageClasses.QFund.BasePage;
+
+public class MiscsDisbursement_PO extends BasePage {
+	public MiscsDisbursement_PO(WebDriver _driver, ExtentTest report) {
+		super(_driver, report);		
+	}
+	
+	@FindBy(xpath ="//td[@class='formHeadingLeft']")
+	private WebElement MD_Header;
+
+	@FindBy(name ="miscBean.miscCd")
+	private WebElement MD_Disbursement_Type;
+	
+	@FindBy(name ="miscBean.tranAmt")
+	private WebElement MD_Amt;
+	
+	@FindBy(name ="miscBean.description")
+	private WebElement MD_Comments;
+	
+	@FindBy(name ="username")
+	private WebElement MD_Username;
+	
+	@FindBy(name ="miscBean.empPwd")
+	private WebElement MD_PIN;
+	
+	@FindBy(name ="Submit3")
+	private WebElement MD_History_Button;
+	
+	@FindBy(name ="disbursements")
+	private WebElement MD_FinishMiscDisbursements_Button;
+	
+	@FindBy(name ="reset")
+	private WebElement MD_Cancel_Button;
+}
